@@ -35,3 +35,23 @@ void print_str(const char* string) {
         print_char(string[i]);
     }
 }
+
+void print_int(int num) {
+    if (num == 0) {
+        print_char('0');
+        return;
+    }
+
+    char buffer[10];
+    int i = 0;
+
+    while (num > 0) {
+        buffer[i++] = (num % 10) + '0';
+        num /= 10;
+    }
+
+    // Reverse buffer
+    for (int j = i - 1; j >= 0; j--) {
+        print_char(buffer[j]);
+    }
+}
