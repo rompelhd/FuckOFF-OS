@@ -2,6 +2,7 @@
 
 void kernel_main() {
     print_clear();
+    idt_init();
 
     print_set_color(PRINT_COLOR_YELLOW, PRINT_COLOR_BLACK);
     print_str("Welcome to ");
@@ -17,6 +18,9 @@ void kernel_main() {
 
     print_set_color(PRINT_COLOR_RED, PRINT_COLOR_BLACK);
     print_str("Rompelhd!\n");
+
+    // Test: (IRQ0)
+    asm volatile ("int $32");
 
     while (1) {
         __asm__ volatile ("hlt");
