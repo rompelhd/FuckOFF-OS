@@ -80,7 +80,7 @@ setup_page_tables:
 	inc ecx
 	cmp ecx, 512
 	jne .loop
-rompelhd@LlamaLama:~/os-series/src/x86_64/boot$ cat main.asm 
+ 
 global start
 extern long_mode_start
 
