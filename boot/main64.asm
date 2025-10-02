@@ -11,5 +11,5 @@ long_mode_start:
     mov fs, ax
     mov gs, ax
 
-        call kernel_main
-    hlt
+    call kernel_main
+    hlt ; freeze cpu
