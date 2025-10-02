@@ -1,4 +1,5 @@
 #include "print.h"
+#include "idt.h"
 
 void kernel_main() {
     print_clear();
